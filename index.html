@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Атмосфера — точный прогноз погоды | Android</title>
+<meta name="description" content="Атмосфера — приложение погоды для Android: точный прогноз, мульти-источники данных, карты осадков и ветра, уведомления, офлайн-кэш. Доступно в RuStore.">
+<meta property="og:title" content="Атмосфера — точный прогноз погоды">
+<meta property="og:description" content="Быстрое и точное приложение погоды для Android. Без Google-сервисов, работает в России.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --bg:#0B0E1A; --card:#151A2B; --accent:#7AA2FF; --gold:#FFD77A;
+    --text:#E8ECF5; --muted:#9AA8C7; --ok:#58C899;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+  header{background:linear-gradient(135deg,#0F1626 0%,#1B2440 60%,#2b2a55 100%);padding:72px 0 48px;text-align:center;border-bottom:1px solid #223}
+  .logo{font-size:72px;line-height:1}
+  h1{font-size:42px;font-weight:800;letter-spacing:-1px;margin-top:10px}
+  .tag{color:var(--muted);font-size:18px;margin-top:6px}
+  .badges{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .badge{display:inline-block;background:var(--accent);color:#0B0E1A;font-weight:700;padding:7px 18px;border-radius:24px;font-size:13px}
+  .badge.gold{background:var(--gold)}
+  section{padding:56px 0}
+  h2{font-size:30px;margin-bottom:8px;font-weight:800;letter-spacing:-.5px}
+  .sub{color:var(--muted);margin-bottom:28px}
+  .feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid #242c44;border-radius:16px;padding:22px;transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-3px);border-color:#3a4666}
+  .card .ico{font-size:32px}
+  .card h3{font-size:16px;margin:8px 0 4px}
+  .card p{color:var(--muted);font-size:14px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:30px}
+  .stat{text-align:center;background:var(--card);border:1px solid #242c44;border-radius:14px;padding:16px}
+  .stat b{font-size:26px;color:var(--gold)}
+  .stat span{display:block;color:var(--muted);font-size:13px}
+  .model{background:linear-gradient(135deg,#1B2440,#241f45);padding:60px 0;text-align:center}
+  .model h2{color:var(--gold)}
+  .price{font-size:40px;font-weight:800;color:var(--text);margin-top:8px}
+  .price small{font-size:16px;color:var(--muted);font-weight:400}
+  .perks{list-style:none;margin:24px auto 0;display:inline-block;text-align:left;color:var(--muted)}
+  .perks li{margin:8px 0}
+  .perks li::before{content:'✓ ';color:var(--ok);font-weight:700}
+  .cta{padding:0}
+  .btn{background:var(--gold);color:#0B0E1A;font-weight:800;font-size:19px;padding:18px 46px;border-radius:44px;text-decoration:none;display:inline-block;margin-top:26px;transition:filter .15s}
+  .btn:hover{filter:brightness(1.1)}
+  .btn.ru{background:var(--accent)}
+  footer{text-align:center;padding:32px 0;color:var(--muted);font-size:13px;border-top:1px solid #1c2233}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🌤️</div>
+  <h1>Атмосфера</h1>
+  <div class="tag">Точный прогноз погоды в реальном времени</div>
+  <div class="badges">
+    <span class="badge gold">В RuStore</span>
+    <span class="badge">Android 8.0+</span>
+    <span class="badge">Без Google-сервисов</span>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Погода, которой можно верить</h2>
+    <p class="sub">Мульти-агрегатор проверяет сразу несколько источников и показывает лучший — даже если часть сервисов недоступна в вашей сети.</p>
+    <div class="feat">
+      <div class="card"><div class="ico">📡</div><h3>Мульти-источники</h3><p>OpenWeatherMap, MET Norway, METAR, SYNOP, wttr.in, Open-Meteo — автоматический выбор самого свежего и точного.</p></div>
+      <div class="card"><div class="ico">🗺️</div><h3>Карты погоды</h3><p>Слои ветра, осадков и давления на интерактивной карте.</p></div>
+      <div class="card"><div class="ico">🔔</div><h3>Уведомления</h3><p>Прогноз на завтра и оповещения о резкой смене погоды — без навязчивой рекламы.</p></div>
+      <div class="card"><div class="ico">💾</div><h3>Офлайн-кэш</h3><p>Прогноз сохраняется на устройстве и открывается даже без интернета.</p></div>
+      <div class="card"><div class="ico">🧭</div><h3>Авто-город</h3><p>Определяет ваше местоположение и мгновенно показывает погоду вокруг.</p></div>
+      <div class="card"><div class="ico">❤️</div><h3>Здоровье</h3><p>Индексы качества воздуха, пыльца и метеочувствительность — в версии Premium.</p></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>6+</b><span>источников данных</span></div>
+      <div class="stat"><b>14</b><span>дней прогноза</span></div>
+      <div class="stat"><b>48</b><span>часов почасово</span></div>
+      <div class="stat"><b>0</b><span>Google-сервисов</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="model">
+  <div class="wrap">
+    <h2>Атмосфера Premium</h2>
+    <p class="sub" style="color:#9AA8C7">Уберите рекламу и откройте максимум возможностей</p>
+    <div class="price">149 ₽ <small>/ месяц</small></div>
+    <ul class="perks">
+      <li>Прогноз на 14 дней и почасовой детальный</li>
+      <li>Индексы качества воздуха и здоровья</li>
+      <li>Расширенные карты осадков и ветра</li>
+      <li>Полное отсутствие рекламы</li>
+    </ul>
+    <br>
+    <a class="btn" href="https://apps.rustore.ru/" target="_blank" rel="noopener">Установить из RuStore</a>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap" style="text-align:center;padding:48px 0">
+    <h2>Скачайте Атмосферу</h2>
+    <p class="sub">Быстро, легко и надёжно. Работает в России без Google.</p>
+    <a class="btn ru" href="https://apps.rustore.ru/" target="_blank" rel="noopener">Открыть в RuStore</a>
+    <p class="sub" style="margin-top:16px">Ссылка активируется сразу после публикации приложения в RuStore.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Атмосфера · <a href="privacy.html">Политика конфиденциальности</a> · Сделано с ❤️ в России</div>
+</footer>
+</body>
+</html>
